@@ -1,0 +1,18 @@
+{
+    "name": "erc-8004-indexer",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "ponder dev",
+        "start": "ponder start",
+        "codegen": "ponder codegen"
+    },
+    "dependencies": {
+        "@ponder/core": "latest",
+        "viem": "latest"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "typescript": "^5.0.0"
+    }
+}

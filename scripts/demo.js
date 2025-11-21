@@ -26,6 +26,13 @@ async function main() {
     const validationRegistryAddress = await validationRegistry.getAddress();
     console.log("AgentValidationRegistry deployed to:", validationRegistryAddress);
 
+    // Deploy Service Registry
+    const ServiceRegistry = await hre.ethers.getContractFactory("AgentServiceRegistry");
+    const serviceRegistry = await ServiceRegistry.deploy();
+    await serviceRegistry.waitForDeployment();
+    const serviceRegistryAddress = await serviceRegistry.getAddress();
+    console.log("AgentServiceRegistry deployed to:", serviceRegistryAddress);
+
     // Register an Agent
     console.log("\nRegistering an Agent...");
     const agentUri = "https://example.com/agent-metadata.json";
@@ -34,6 +41,14 @@ async function main() {
 
     const tokenId = await identityRegistry.getAgentTokenId(agent.address);
     console.log(`Agent registered! Token ID: ${tokenId}, Address: ${agent.address}`);
+
+    // Register a Service
+    console.log("\nRegistering a Service...");
+    const serviceId = "service-1";
+    const serviceMetadata = "https://example.com/service-metadata.json";
+    const serviceTx = await serviceRegistry.registerService(tokenId, serviceId, serviceMetadata);
+    await serviceTx.wait();
+    console.log(`Service registered! Service ID: ${serviceId}`);
 
     // Submit and Validate Task with Fee
     console.log("\nSubmitting Task with 1 ETH fee...");
@@ -87,6 +102,9 @@ async function main() {
 
     const avgScore = await reputationRegistry.getAverageScore(tokenId);
     console.log(`Average Score: ${avgScore}`);
+
+    const services = await serviceRegistry.getAgentServices(tokenId);
+    console.log(`\nServices for Agent ${tokenId}:`, services);
 }
 
 main().catch((error) => {
