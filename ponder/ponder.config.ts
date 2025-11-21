@@ -4,6 +4,7 @@ import { http } from "viem";
 import AgentIdentityRegistry from "../artifacts/contracts/AgentIdentityRegistry.sol/AgentIdentityRegistry.json";
 import AgentServiceRegistry from "../artifacts/contracts/AgentServiceRegistry.sol/AgentServiceRegistry.json";
 import AgentValidationRegistry from "../artifacts/contracts/AgentValidationRegistry.sol/AgentValidationRegistry.json";
+import AgentJuryRegistry from "../artifacts/contracts/AgentJuryRegistry.sol/AgentJuryRegistry.json";
 
 export default createConfig({
     networks: {
@@ -28,6 +29,12 @@ export default createConfig({
         AgentValidationRegistry: {
             abi: AgentValidationRegistry.abi,
             address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0", // Default Hardhat address 3
+            network: "hardhat",
+            startBlock: 0,
+        },
+        AgentJuryRegistry: {
+            abi: AgentJuryRegistry.abi,
+            address: "0x0165878A594ca255338adfa4d48449f69242Eb8F", // Default Hardhat address 5
             network: "hardhat",
             startBlock: 0,
         },

@@ -58,3 +58,55 @@ ponder.on("AgentValidationRegistry:TaskValidated", async ({ event, context }) =>
         },
     });
 });
+
+ponder.on("AgentJuryRegistry:DisputeCreated", async ({ event, context }) => {
+    const { Dispute, Validation } = context.db;
+    await Dispute.create({
+        id: event.args.disputeId,
+        data: {
+            taskId: event.args.taskId,
+            challenger: event.args.challenger,
+            votesFor: 0n,
+            votesAgainst: 0n,
+            resolved: false,
+            ruling: false,
+        },
+    });
+
+    // Link validation to dispute
+    await Validation.update({
+        id: event.args.taskId.toString(),
+        data: {
+            disputeId: event.args.disputeId,
+        },
+    });
+});
+
+ponder.on("AgentJuryRegistry:VoteCast", async ({ event, context }) => {
+    const { Dispute } = context.db;
+    const dispute = await Dispute.findUnique({ id: event.args.disputeId });
+    if (!dispute) return;
+
+    if (event.args.support) {
+        await Dispute.update({
+            id: event.args.disputeId,
+            data: { votesFor: dispute.votesFor + 1n },
+        });
+    } else {
+        await Dispute.update({
+            id: event.args.disputeId,
+            data: { votesAgainst: dispute.votesAgainst + 1n },
+        });
+    }
+});
+
+ponder.on("AgentJuryRegistry:RulingExecuted", async ({ event, context }) => {
+    const { Dispute } = context.db;
+    await Dispute.update({
+        id: event.args.disputeId,
+        data: {
+            resolved: true,
+            ruling: event.args.ruling,
+        },
+    });
+});

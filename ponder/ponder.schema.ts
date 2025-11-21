@@ -21,5 +21,15 @@ export default onchainSchema((p) => ({
         isValidated: p.boolean(),
         isValid: p.boolean(),
         validator: p.string(),
+        disputeId: p.bigint().optional(), // Link to dispute if any
+    }),
+    Dispute: p.createTable({
+        id: p.bigint(),
+        taskId: p.bigint(),
+        challenger: p.string(),
+        votesFor: p.bigint(),
+        votesAgainst: p.bigint(),
+        resolved: p.boolean(),
+        ruling: p.boolean(),
     }),
 }));

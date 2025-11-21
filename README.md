@@ -73,19 +73,72 @@ Try this query to see the full state of your agents and their history:
 }
 ```
 
-## The ERC-8004 Workflow
+### 4. Decentralized Jury (Dispute Resolution)
+A mechanism for trustless dispute resolution.
+- **Jury Registry**: Allows users to stake ETH to become jurors.
+- **Dispute Mechanism**: If a task is challenged, jurors vote on its validity.
+- **Economic Security**: Jurors are incentivized to vote honestly (in a full implementation), and the loser of the dispute pays the fees.
+
+## 🔄 The ERC-8004 Workflow
+
+### Visual Workflow
+```mermaid
+sequenceDiagram
+    actor Agent
+    actor Validator
+    actor Challenger
+    actor Juror
+    participant ValidationRegistry
+    participant JuryRegistry
+
+    Agent->>ValidationRegistry: submitTask(hash)
+    
+    alt Normal Validation
+        Validator->>ValidationRegistry: validateTask(true)
+        ValidationRegistry-->>Agent: Task Validated
+    else Dispute Process
+        Challenger->>JuryRegistry: createDispute(taskId)
+        JuryRegistry->>ValidationRegistry: Mark Disputed
+        
+        Juror->>JuryRegistry: vote(disputeId, true/false)
+        Juror->>JuryRegistry: vote(disputeId, true/false)
+        
+        JuryRegistry->>ValidationRegistry: resolveDispute(ruling)
+        ValidationRegistry-->>Agent: Task Finalized (Valid/Invalid)
+    end
+```
+
+### Step-by-Step
+1.  **Registration**: Agent registers identity and services.
+2.  **Service Discovery**: Users find agents via the Indexer.
+3.  **Task Execution**: Agent performs work and submits a hash of the result to `AgentValidationRegistry`.
+4.  **Validation**:
+    *   **Optimistic**: A validator confirms the result.
+    *   **Dispute**: If the result is suspicious, a Challenger raises a dispute in `AgentJuryRegistry`.
+5.  **Resolution**: Jurors vote on the dispute. The majority ruling is executed on-chain.
+
+## 💰 Incentive Mechanism
 
 ### 1. Registration
 Agents mint an NFT ID via `AgentIdentityRegistry`. This establishes their on-chain identity.
 
-### 2. Service Discovery
-Agents register their capabilities (services) in the `AgentServiceRegistry`. This allows users to find agents based on what they can do.
+### 2. Staking
+*   **Agents**: Must stake ETH to register. This stake is slashed if they act maliciously.
+*   **Jurors**: Must stake ETH to participate in the court. This ensures they have "skin in the game".
 
-### 3. Task Submission (Commitment)
+### 3. Game Theory (Schelling Point)
+The system uses a **Schelling Point** mechanism to incentivize honest voting without a central authority.
+*   **Concept**: Jurors are rewarded for voting with the majority. Since the "truth" is the only common focal point that everyone expects others to vote for, honest voting becomes the dominant strategy.
+*   **Loser Pays**:
+    *   **If Agent Wins (Valid)**: The Challenger loses their dispute fee. This fee is distributed to the jurors who voted "Valid".
+    *   **If Agent Loses (Invalid)**: The Agent's task fee (and potentially stake) is slashed. The Challenger gets their fee back + a reward. The remaining slashed funds are distributed to jurors who voted "Invalid".
+*   **Result**: Spam disputes are costly (Challenger pays), and malicious agents are punished (Agent pays). Honest behavior is profitable.
+
+### 4. Task Submission (Commitment)
 Agents perform work off-chain and submit a **hash** of the result to `AgentValidationRegistry` along with a fee.
 *   `submitTask(agentId, taskHash) payable`
 
-### 4. Validation
+### 5. Validation
 Validators verify the off-chain work against the committed hash. If correct, they validate it on-chain and claim the fee.
 *   `validateTask(taskId, isValid)`
 
