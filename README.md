@@ -9,6 +9,7 @@ This project is a Proof of Concept (POC) for **ERC-8004**, a standard for regist
 *   **Agent Reputation Registry**: System to record and retrieve reputation scores and reviews.
 *   **Agent Service Registry**: Registry for agents to list their available services/resources.
 *   **Indexer (Ponder)**: A local-first indexer that aggregates on-chain events into a queryable GraphQL API.
+*   **Agent Explorer (Frontend)**: A Next.js web interface to discover agents and view their reputation/history.
 
 ## Prerequisites
 
@@ -17,61 +18,77 @@ This project is a Proof of Concept (POC) for **ERC-8004**, a standard for regist
 *   **npm**: Installed with Node.js.
 *   **Git**: For cloning the repository.
 
-## Quick Start
+## 🚀 Comprehensive Guide
 
-Follow these steps to get the entire system (Blockchain + Indexer) running locally.
+Follow these steps to run the entire system, including the blockchain, indexer, and frontend.
 
-### 1. Install Dependencies
+### 1. Setup Environment
+Install dependencies for all components.
 ```bash
+# Root dependencies (Hardhat)
 npm install
+
+# Indexer dependencies
 cd ponder && npm install && cd ..
+
+# Frontend dependencies
+cd frontend && npm install && cd ..
 ```
 
 ### 2. Start Local Blockchain
-Open a terminal and start the Hardhat node. This mimics the Ethereum blockchain locally.
+Open **Terminal 1**. Start the Hardhat node to mimic Ethereum locally.
 ```bash
 npx hardhat node
 ```
-*Keep this terminal open.*
+*Keep this terminal running.*
 
-### 3. Deploy Contracts & Run Demo
-Open a **second terminal**. This script deploys all contracts and simulates an agent registration, task submission, and validation flow.
-```bash
-npx hardhat run scripts/demo.js --network localhost
-```
-You should see output confirming deployment addresses and the demo flow completion.
-
-### 4. Start the Indexer
-Open a **third terminal**. Start Ponder to index the events from your local blockchain.
+### 3. Start the Indexer
+Open **Terminal 2**. Start Ponder to index events from the local blockchain.
 ```bash
 cd ponder
 npm run dev
 ```
-Ponder will start indexing from block 0. You should see logs indicating it is processing blocks.
+*Keep this terminal running.*
 
-### 5. Query the Data
-Open your browser to **http://localhost:42069**. This is the GraphQL playground.
-
-Try this query to see the full state of your agents and their history:
-```graphql
-{
-  agents {
-    id
-    address
-    uri
-    services {
-      id
-      metadataURI
-      active
-    }
-    validations {
-      taskId
-      isValid
-      validator
-    }
-  }
-}
+### 4. Start the Frontend Explorer
+Open **Terminal 3**. Start the Next.js frontend to view agents.
+```bash
+cd frontend
+npm run dev
 ```
+*Keep this terminal running.* Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+### 🧪 Use Case 1: Basic Agent Workflow
+Simulate an agent registering, performing a task, and getting validated.
+
+Open **Terminal 4** and run:
+```bash
+npx hardhat run scripts/demo.js --network localhost
+```
+**What happens:**
+1.  Contracts are deployed.
+2.  Agent registers (ID: 1).
+3.  Agent registers a service.
+4.  Agent submits a task.
+5.  Validator verifies the task (Optimistic Validation).
+6.  **Check the Frontend**: Refresh [localhost:3000](http://localhost:3000) to see the new agent and task.
+
+### ⚖️ Use Case 2: Dispute Resolution (Jury)
+Simulate a malicious agent submitting an invalid task, which is challenged and slashed by a jury.
+
+In **Terminal 4**, run:
+```bash
+npx hardhat run scripts/demo_jury.js --network localhost
+```
+**What happens:**
+1.  Agent submits a task.
+2.  Challenger raises a dispute (staking a fee).
+3.  3 Jurors vote (2 vote "Invalid", 1 votes "Valid").
+4.  **Ruling Executed**: The agent is slashed.
+5.  **Incentives**: The Challenger and winning Jurors are rewarded with the slashed funds.
+6.  **Check the Frontend**: Go to the agent's detail page to see the disputed task marked with ⚠️.
 
 ### 4. Decentralized Jury (Dispute Resolution)
 A mechanism for trustless dispute resolution.

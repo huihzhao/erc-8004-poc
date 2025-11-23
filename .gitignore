@@ -4,3 +4,6 @@ cache
 coverage
 .env
 .DS_Store
+hardhat.log
+.ponder
+frontend/.next
