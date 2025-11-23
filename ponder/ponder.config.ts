@@ -16,25 +16,25 @@ export default createConfig({
     contracts: {
         AgentIdentityRegistry: {
             abi: AgentIdentityRegistry.abi,
-            address: "0x0DCd1Bf9A1b36cE34237eEaFef220932846BCD82",
+            address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
             network: "hardhat",
             startBlock: 0,
         },
         AgentServiceRegistry: {
             abi: AgentServiceRegistry.abi,
-            address: "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1",
+            address: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
             network: "hardhat",
             startBlock: 0,
         },
         AgentValidationRegistry: {
             abi: AgentValidationRegistry.abi,
-            address: "0x0B306BF915C4d645ff596e518fAf3F9669b97016",
+            address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
             network: "hardhat",
             startBlock: 0,
         },
         AgentJuryRegistry: {
             abi: AgentJuryRegistry.abi,
-            address: "0x0165878A594ca255338adfa4d48449f69242Eb8F", // Keeping old address for now as it wasn't deployed in demo.js
+            address: "0x0165878A594ca255338adfa4d48449f69242Eb8F", // Not deployed in demo.js
             network: "hardhat",
             startBlock: 0,
         },
