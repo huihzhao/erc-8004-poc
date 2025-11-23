@@ -1,35 +1,56 @@
-import { onchainSchema } from "@ponder/core";
+import { onchainTable, relations } from "@ponder/core";
 
-export default onchainSchema((p) => ({
-    Agent: p.createTable({
-        id: p.bigint(), // Token ID
-        address: p.string(),
-        uri: p.string(),
-        services: p.many("Service.agentId"),
-        validations: p.many("Validation.agentId"),
-    }),
-    Service: p.createTable({
-        id: p.string(), // Service ID (string)
-        agentId: p.bigint().references("Agent.id"),
-        metadataURI: p.string(),
-        active: p.boolean(),
-    }),
-    Validation: p.createTable({
-        id: p.string(),
-        taskId: p.bigint(),
-        agentId: p.bigint().references("Agent.id"),
-        isValidated: p.boolean(),
-        isValid: p.boolean(),
-        validator: p.string(),
-        disputeId: p.bigint().optional(), // Link to dispute if any
-    }),
-    Dispute: p.createTable({
-        id: p.bigint(),
-        taskId: p.bigint(),
-        challenger: p.string(),
-        votesFor: p.bigint(),
-        votesAgainst: p.bigint(),
-        resolved: p.boolean(),
-        ruling: p.boolean(),
+export const Agent = onchainTable("Agent", (p) => ({
+    id: p.bigint().primaryKey(), // Token ID
+    address: p.hex(), // Use hex for addresses
+    uri: p.text(),
+}));
+
+export const AgentRelations = relations(Agent, ({ many }) => ({
+    services: many(Service),
+    validations: many(Validation),
+}));
+
+export const Service = onchainTable("Service", (p) => ({
+    id: p.text().primaryKey(), // Service ID (string)
+    agentId: p.bigint().references(() => Agent.id),
+    metadataURI: p.text(),
+    active: p.boolean(),
+}));
+
+export const ServiceRelations = relations(Service, ({ one }) => ({
+    agent: one(Agent, {
+        fields: [Service.agentId],
+        references: [Agent.id],
     }),
 }));
+
+export const Validation = onchainTable("Validation", (p) => ({
+    id: p.text().primaryKey(),
+    taskId: p.bigint(),
+    agentId: p.bigint().references(() => Agent.id),
+    isValidated: p.boolean(),
+    isValid: p.boolean(),
+    validator: p.hex(),
+    disputeId: p.bigint(), // Optional by default?
+}));
+
+export const ValidationRelations = relations(Validation, ({ one }) => ({
+    agent: one(Agent, {
+        fields: [Validation.agentId],
+        references: [Agent.id],
+    }),
+}));
+
+export const Dispute = onchainTable("Dispute", (p) => ({
+    id: p.bigint().primaryKey(),
+    taskId: p.bigint(),
+    challenger: p.hex(),
+    votesFor: p.bigint(),
+    votesAgainst: p.bigint(),
+    resolved: p.boolean(),
+    ruling: p.boolean(),
+}));
+
+
+
