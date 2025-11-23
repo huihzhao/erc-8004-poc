@@ -17,5 +17,256 @@ type Meta {
 }
 
 type Query {
+  agent(id: BigInt!): Agent
+  agents(where: AgentFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): AgentPage!
+  service(id: String!): Service
+  services(where: ServiceFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ServicePage!
+  validation(id: String!): Validation
+  validations(where: ValidationFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ValidationPage!
+  dispute(id: BigInt!): Dispute
+  disputes(where: DisputeFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): DisputePage!
   _meta: Meta
+}
+
+type Agent {
+  id: BigInt!
+  address: String
+  uri: String
+  services(where: ServiceFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ServicePage
+  validations(where: ValidationFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ValidationPage
+}
+
+type ServicePage {
+  items: [Service!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type Service {
+  id: String!
+  agentId: BigInt
+  metadataURI: String
+  active: Boolean
+  agent: Agent
+}
+
+input ServiceFilter {
+  AND: [ServiceFilter]
+  OR: [ServiceFilter]
+  id: String
+  id_not: String
+  id_in: [String]
+  id_not_in: [String]
+  id_contains: String
+  id_not_contains: String
+  id_starts_with: String
+  id_ends_with: String
+  id_not_starts_with: String
+  id_not_ends_with: String
+  agentId: BigInt
+  agentId_not: BigInt
+  agentId_in: [BigInt]
+  agentId_not_in: [BigInt]
+  agentId_gt: BigInt
+  agentId_lt: BigInt
+  agentId_gte: BigInt
+  agentId_lte: BigInt
+  metadataURI: String
+  metadataURI_not: String
+  metadataURI_in: [String]
+  metadataURI_not_in: [String]
+  metadataURI_contains: String
+  metadataURI_not_contains: String
+  metadataURI_starts_with: String
+  metadataURI_ends_with: String
+  metadataURI_not_starts_with: String
+  metadataURI_not_ends_with: String
+  active: Boolean
+  active_not: Boolean
+  active_in: [Boolean]
+  active_not_in: [Boolean]
+}
+
+type ValidationPage {
+  items: [Validation!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type Validation {
+  id: String!
+  taskId: BigInt
+  agentId: BigInt
+  isValidated: Boolean
+  isValid: Boolean
+  validator: String
+  disputeId: BigInt
+  agent: Agent
+}
+
+input ValidationFilter {
+  AND: [ValidationFilter]
+  OR: [ValidationFilter]
+  id: String
+  id_not: String
+  id_in: [String]
+  id_not_in: [String]
+  id_contains: String
+  id_not_contains: String
+  id_starts_with: String
+  id_ends_with: String
+  id_not_starts_with: String
+  id_not_ends_with: String
+  taskId: BigInt
+  taskId_not: BigInt
+  taskId_in: [BigInt]
+  taskId_not_in: [BigInt]
+  taskId_gt: BigInt
+  taskId_lt: BigInt
+  taskId_gte: BigInt
+  taskId_lte: BigInt
+  agentId: BigInt
+  agentId_not: BigInt
+  agentId_in: [BigInt]
+  agentId_not_in: [BigInt]
+  agentId_gt: BigInt
+  agentId_lt: BigInt
+  agentId_gte: BigInt
+  agentId_lte: BigInt
+  isValidated: Boolean
+  isValidated_not: Boolean
+  isValidated_in: [Boolean]
+  isValidated_not_in: [Boolean]
+  isValid: Boolean
+  isValid_not: Boolean
+  isValid_in: [Boolean]
+  isValid_not_in: [Boolean]
+  validator: String
+  validator_not: String
+  validator_in: [String]
+  validator_not_in: [String]
+  validator_contains: String
+  validator_not_contains: String
+  validator_starts_with: String
+  validator_ends_with: String
+  validator_not_starts_with: String
+  validator_not_ends_with: String
+  disputeId: BigInt
+  disputeId_not: BigInt
+  disputeId_in: [BigInt]
+  disputeId_not_in: [BigInt]
+  disputeId_gt: BigInt
+  disputeId_lt: BigInt
+  disputeId_gte: BigInt
+  disputeId_lte: BigInt
+}
+
+type AgentPage {
+  items: [Agent!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input AgentFilter {
+  AND: [AgentFilter]
+  OR: [AgentFilter]
+  id: BigInt
+  id_not: BigInt
+  id_in: [BigInt]
+  id_not_in: [BigInt]
+  id_gt: BigInt
+  id_lt: BigInt
+  id_gte: BigInt
+  id_lte: BigInt
+  address: String
+  address_not: String
+  address_in: [String]
+  address_not_in: [String]
+  address_contains: String
+  address_not_contains: String
+  address_starts_with: String
+  address_ends_with: String
+  address_not_starts_with: String
+  address_not_ends_with: String
+  uri: String
+  uri_not: String
+  uri_in: [String]
+  uri_not_in: [String]
+  uri_contains: String
+  uri_not_contains: String
+  uri_starts_with: String
+  uri_ends_with: String
+  uri_not_starts_with: String
+  uri_not_ends_with: String
+}
+
+type Dispute {
+  id: BigInt!
+  taskId: BigInt
+  challenger: String
+  votesFor: BigInt
+  votesAgainst: BigInt
+  resolved: Boolean
+  ruling: Boolean
+}
+
+type DisputePage {
+  items: [Dispute!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input DisputeFilter {
+  AND: [DisputeFilter]
+  OR: [DisputeFilter]
+  id: BigInt
+  id_not: BigInt
+  id_in: [BigInt]
+  id_not_in: [BigInt]
+  id_gt: BigInt
+  id_lt: BigInt
+  id_gte: BigInt
+  id_lte: BigInt
+  taskId: BigInt
+  taskId_not: BigInt
+  taskId_in: [BigInt]
+  taskId_not_in: [BigInt]
+  taskId_gt: BigInt
+  taskId_lt: BigInt
+  taskId_gte: BigInt
+  taskId_lte: BigInt
+  challenger: String
+  challenger_not: String
+  challenger_in: [String]
+  challenger_not_in: [String]
+  challenger_contains: String
+  challenger_not_contains: String
+  challenger_starts_with: String
+  challenger_ends_with: String
+  challenger_not_starts_with: String
+  challenger_not_ends_with: String
+  votesFor: BigInt
+  votesFor_not: BigInt
+  votesFor_in: [BigInt]
+  votesFor_not_in: [BigInt]
+  votesFor_gt: BigInt
+  votesFor_lt: BigInt
+  votesFor_gte: BigInt
+  votesFor_lte: BigInt
+  votesAgainst: BigInt
+  votesAgainst_not: BigInt
+  votesAgainst_in: [BigInt]
+  votesAgainst_not_in: [BigInt]
+  votesAgainst_gt: BigInt
+  votesAgainst_lt: BigInt
+  votesAgainst_gte: BigInt
+  votesAgainst_lte: BigInt
+  resolved: Boolean
+  resolved_not: Boolean
+  resolved_in: [Boolean]
+  resolved_not_in: [Boolean]
+  ruling: Boolean
+  ruling_not: Boolean
+  ruling_in: [Boolean]
+  ruling_not_in: [Boolean]
 }

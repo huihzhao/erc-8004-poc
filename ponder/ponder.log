@@ -1,0 +1,831 @@
+
+> dev
+> ponder dev
+
+Failed to find Response internal state key
+12:16:04 PM WARN  app        Local environment file (.env.local) not found
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:04 PM INFO  build      Using PGlite database at .ponder/pglite (default)
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:04 PM WARN  build      Network 'hardhat' is using a public RPC URL (http://127.0.0.1:8545). Most apps require an RPC URL with a higher rate limit.
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  database   Created tables [Agent, Service, Validation, Dispute]
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  database   Created view 'public'.'Agent'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  database   Created view 'public'.'Service'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  database   Created view 'public'.'Validation'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  database   Created view 'public'.'Dispute'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  historical Started syncing 'hardhat' with 100% cached
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  historical Skipped historical sync for 'hardhat' because all blocks are cached.
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  indexing   Completed historical indexing
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  database   Created view 'public'.'Agent'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  database   Created view 'public'.'Service'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  database   Created view 'public'.'Validation'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  database   Created view 'public'.'Dispute'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  server     Started responding as healthy
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  server     Started listening on port 42069
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 4 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 5 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 6 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 7 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 8 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 9 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 10 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 11 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 12 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 13 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 14 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 15 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 16 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 17 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 18 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 19 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 20 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 21 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 22 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 23 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 24 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 25 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 26 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 27 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced block 28 from 'hardhat' 
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM INFO  realtime   Synced 1 log from 'hardhat' block 29
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[GDB Keys: [ 'find', 'insert', 'update', 'delete', 'sql' ]
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:16:05 PM ERROR indexing   Error while processing 'AgentIdentityRegistry:AgentRegistered' event in 'hardhat' block 29
+TypeError: Cannot read properties of undefined (reading 'create')
+    at /Users/huizhao/Desktop/erc-8004-poc/ponder/src/index.ts:6:17
+  4 |     console.log("DB Keys:", Object.keys(context.db));
+  5 |     const { Agent } = context.db;
+> 6 |     await Agent.create({
+    |                 ^
+  7 |         id: event.args.tokenId,
+  8 |         data: {
+  9 |             address: event.args.agentAddress,
+Event arguments:
+  tokenId        1
+  agentAddress   0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+  uri            https://example.com/agent-metadata.json
+
+Sync
+
+│ Network │ Status   │ Block │ RPC (req/s) │
+├─────────┼──────────┼───────┼─────────────┤
+│ hardhat │ realtime │     3 │         0.0 │
+
+Indexing
+
+Waiting to start...
+
+Progress (live)
+
+████████████████████████████████████████████████ 100%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+Resolve the error and save your changes to reload the server.
+[2K[1A[2K[1A[2K[G12:16:13 PM WARN  process    Received SIGTERM, starting shutdown sequence
+
+Resolve the error and save your changes to reload the server.

@@ -2,21 +2,25 @@ import { client } from '@/lib/client';
 import Link from 'next/link';
 
 const AGENT_DETAIL_QUERY = `
-  query($id: String!) {
+  query($id: BigInt!) {
     agent(id: $id) {
       id
       address
       uri
       services {
-        id
-        metadataURI
-        active
+        items {
+          id
+          metadataURI
+          active
+        }
       }
       validations {
-        taskId
-        isValid
-        validator
-        disputeId
+        items {
+          taskId
+          isValid
+          validator
+          disputeId
+        }
       }
     }
   }
@@ -29,6 +33,9 @@ export default async function AgentDetail({ params }: { params: { id: string } }
     if (!agent) {
         return <div className="p-8 text-center">Agent not found</div>;
     }
+
+    const services = agent.services?.items || [];
+    const validations = agent.validations?.items || [];
 
     return (
         <main className="min-h-screen bg-gray-50 p-8">
@@ -58,9 +65,9 @@ export default async function AgentDetail({ params }: { params: { id: string } }
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Services Section */}
                     <div className="bg-white rounded-xl shadow-sm p-6">
-                        <h2 className="text-xl font-bold text-gray-900 mb-4">Services ({agent.services.length})</h2>
+                        <h2 className="text-xl font-bold text-gray-900 mb-4">Services ({services.length})</h2>
                         <div className="space-y-3">
-                            {agent.services.map((service: any) => (
+                            {services.map((service: any) => (
                                 <div key={service.id} className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50">
                                     <div className="flex justify-between items-start">
                                         <div>
@@ -80,7 +87,7 @@ export default async function AgentDetail({ params }: { params: { id: string } }
                     <div className="bg-white rounded-xl shadow-sm p-6">
                         <h2 className="text-xl font-bold text-gray-900 mb-4">Task History</h2>
                         <div className="space-y-3">
-                            {agent.validations.map((val: any) => (
+                            {validations.map((val: any) => (
                                 <div key={val.taskId} className="border border-gray-200 rounded-lg p-4">
                                     <div className="flex justify-between items-center mb-2">
                                         <span className="font-mono text-sm text-gray-500">Task #{val.taskId}</span>
@@ -96,7 +103,7 @@ export default async function AgentDetail({ params }: { params: { id: string } }
                                     </div>
                                 </div>
                             ))}
-                            {agent.validations.length === 0 && (
+                            {validations.length === 0 && (
                                 <p className="text-gray-400 text-center py-4">No tasks performed yet.</p>
                             )}
                         </div>

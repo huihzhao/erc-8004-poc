@@ -1,0 +1,704 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/huizhao/Desktop/erc-8004-poc/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/huizhao/Desktop/erc-8004-poc/frontend/package-lock.json
+
+   ▲ Next.js 16.0.3 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://10.148.184.255:3000
+
+ ✓ Starting...
+ ✓ Ready in 339ms
+GraphQL Error: Error [CombinedError]: [Network] <!--
+ *  Copyright (c) 2021 GraphQL Contributors
+ *  All rights reserved.
+ *
+ *  This source code is licensed under the license found in the
+ *  LICENSE file in the root directory of this source tree.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ponder Playground</title>
+    <style>
+      body {
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      #graphiql {
+        height: 100vh;
+      }
+      *::-webkit-scrollbar {
+        height: 0.3rem;
+        width: 0.5rem;
+      }
+      *::-webkit-scrollbar-track {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+      *::-webkit-scrollbar-thumb {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/graphiql@3.7.2/graphiql.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/style.css" />
+  </head>
+  <body>
+    <div id="graphiql">Loading...</div>
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>1
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/graphiql@3.7.2/graphiql.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/index.umd.js" crossorigin="anonymous"></script>
+    <script>
+      const fetcher = GraphiQL.createFetcher({ url: "/graphql" });
+      const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
+      const root = ReactDOM.createRoot(document.getElementById("graphiql"));
+      root.render(
+        React.createElement(GraphiQL, {
+          fetcher,
+          plugins: [explorerPlugin],
+          defaultEditorToolsVisibility: false,
+        })
+      );
+    </script>
+  </body>
+</html>
+    at async (.next/dev/server/chunks/ssr/9e883_7f1f8504._.js:9441:30) {
+  graphQLErrors: [],
+  networkError: Error: <!--
+   *  Copyright (c) 2021 GraphQL Contributors
+   *  All rights reserved.
+   *
+   *  This source code is licensed under the license found in the
+   *  LICENSE file in the root directory of this source tree.
+  -->
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Ponder Playground</title>
+      <style>
+        body {
+          height: 100%;
+          margin: 0;
+          width: 100%;
+          overflow: hidden;
+        }
+        #graphiql {
+          height: 100vh;
+        }
+        *::-webkit-scrollbar {
+          height: 0.3rem;
+          width: 0.5rem;
+        }
+        *::-webkit-scrollbar-track {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+        *::-webkit-scrollbar-thumb {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+      </style>
+      <link rel="stylesheet" href="https://unpkg.com/graphiql@3.7.2/graphiql.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/style.css" />
+    </head>
+    <body>
+      <div id="graphiql">Loading...</div>
+      <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>1
+      <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/graphiql@3.7.2/graphiql.min.js" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/index.umd.js" crossorigin="anonymous"></script>
+      <script>
+        const fetcher = GraphiQL.createFetcher({ url: "/graphql" });
+        const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
+        const root = ReactDOM.createRoot(document.getElementById("graphiql"));
+        root.render(
+          React.createElement(GraphiQL, {
+            fetcher,
+            plugins: [explorerPlugin],
+            defaultEditorToolsVisibility: false,
+          })
+        );
+      </script>
+    </body>
+  </html>
+      at async (.next/dev/server/chunks/ssr/9e883_7f1f8504._.js:9441:30),
+  response: Response {
+    status: 200,
+    statusText: 'OK',
+    headers: Headers {
+      'access-control-allow-origin': '*',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '1895',
+      date: 'Sun, 23 Nov 2025 11:21:43 GMT',
+      connection: 'keep-alive',
+      'keep-alive': 'timeout=5'
+    },
+    body: undefined,
+    bodyUsed: true,
+    ok: true,
+    redirected: false,
+    type: 'default',
+    url: 'http://localhost:42069/graphql?query=%7B%0A++agents+%7B%0A++++items+%7B%0A++++++id%0A++++++address%0A++++++uri%0A++++++services+%7B%0A++++++++items+%7B%0A++++++++++id%0A++++++++++__typename%0A++++++++%7D%0A++++++++__typename%0A++++++%7D%0A++++++__typename%0A++++%7D%0A++++__typename%0A++%7D%0A%7D&variables=%7B%7D'
+  }
+}
+ GET / 200 in 821ms (compile: 691ms, render: 131ms)
+GraphQL Error: Error [CombinedError]: [Network] <!--
+ *  Copyright (c) 2021 GraphQL Contributors
+ *  All rights reserved.
+ *
+ *  This source code is licensed under the license found in the
+ *  LICENSE file in the root directory of this source tree.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ponder Playground</title>
+    <style>
+      body {
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      #graphiql {
+        height: 100vh;
+      }
+      *::-webkit-scrollbar {
+        height: 0.3rem;
+        width: 0.5rem;
+      }
+      *::-webkit-scrollbar-track {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+      *::-webkit-scrollbar-thumb {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/graphiql@3.7.2/graphiql.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/style.css" />
+  </head>
+  <body>
+    <div id="graphiql">Loading...</div>
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>1
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/graphiql@3.7.2/graphiql.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/index.umd.js" crossorigin="anonymous"></script>
+    <script>
+      const fetcher = GraphiQL.createFetcher({ url: "/graphql" });
+      const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
+      const root = ReactDOM.createRoot(document.getElementById("graphiql"));
+      root.render(
+        React.createElement(GraphiQL, {
+          fetcher,
+          plugins: [explorerPlugin],
+          defaultEditorToolsVisibility: false,
+        })
+      );
+    </script>
+  </body>
+</html>
+    at async (.next/dev/server/chunks/ssr/9e883_7f1f8504._.js:9441:30) {
+  graphQLErrors: [],
+  networkError: Error: <!--
+   *  Copyright (c) 2021 GraphQL Contributors
+   *  All rights reserved.
+   *
+   *  This source code is licensed under the license found in the
+   *  LICENSE file in the root directory of this source tree.
+  -->
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Ponder Playground</title>
+      <style>
+        body {
+          height: 100%;
+          margin: 0;
+          width: 100%;
+          overflow: hidden;
+        }
+        #graphiql {
+          height: 100vh;
+        }
+        *::-webkit-scrollbar {
+          height: 0.3rem;
+          width: 0.5rem;
+        }
+        *::-webkit-scrollbar-track {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+        *::-webkit-scrollbar-thumb {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+      </style>
+      <link rel="stylesheet" href="https://unpkg.com/graphiql@3.7.2/graphiql.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/style.css" />
+    </head>
+    <body>
+      <div id="graphiql">Loading...</div>
+      <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>1
+      <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/graphiql@3.7.2/graphiql.min.js" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/index.umd.js" crossorigin="anonymous"></script>
+      <script>
+        const fetcher = GraphiQL.createFetcher({ url: "/graphql" });
+        const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
+        const root = ReactDOM.createRoot(document.getElementById("graphiql"));
+        root.render(
+          React.createElement(GraphiQL, {
+            fetcher,
+            plugins: [explorerPlugin],
+            defaultEditorToolsVisibility: false,
+          })
+        );
+      </script>
+    </body>
+  </html>
+      at async (.next/dev/server/chunks/ssr/9e883_7f1f8504._.js:9441:30),
+  response: Response {
+    status: 200,
+    statusText: 'OK',
+    headers: Headers {
+      'access-control-allow-origin': '*',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '1895',
+      date: 'Sun, 23 Nov 2025 11:21:55 GMT',
+      connection: 'keep-alive',
+      'keep-alive': 'timeout=5'
+    },
+    body: undefined,
+    bodyUsed: true,
+    ok: true,
+    redirected: false,
+    type: 'default',
+    url: 'http://localhost:42069/graphql?query=%7B%0A++agents+%7B%0A++++items+%7B%0A++++++id%0A++++++address%0A++++++uri%0A++++++services+%7B%0A++++++++items+%7B%0A++++++++++id%0A++++++++++__typename%0A++++++++%7D%0A++++++++__typename%0A++++++%7D%0A++++++__typename%0A++++%7D%0A++++__typename%0A++%7D%0A%7D&variables=%7B%7D'
+  }
+}
+ GET / 200 in 25ms (compile: 1621µs, render: 24ms)
+GraphQL Error: Error [CombinedError]: [Network] <!--
+ *  Copyright (c) 2021 GraphQL Contributors
+ *  All rights reserved.
+ *
+ *  This source code is licensed under the license found in the
+ *  LICENSE file in the root directory of this source tree.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ponder Playground</title>
+    <style>
+      body {
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      #graphiql {
+        height: 100vh;
+      }
+      *::-webkit-scrollbar {
+        height: 0.3rem;
+        width: 0.5rem;
+      }
+      *::-webkit-scrollbar-track {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+      *::-webkit-scrollbar-thumb {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/graphiql@3.7.2/graphiql.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/style.css" />
+  </head>
+  <body>
+    <div id="graphiql">Loading...</div>
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>1
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/graphiql@3.7.2/graphiql.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/index.umd.js" crossorigin="anonymous"></script>
+    <script>
+      const fetcher = GraphiQL.createFetcher({ url: "/graphql" });
+      const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
+      const root = ReactDOM.createRoot(document.getElementById("graphiql"));
+      root.render(
+        React.createElement(GraphiQL, {
+          fetcher,
+          plugins: [explorerPlugin],
+          defaultEditorToolsVisibility: false,
+        })
+      );
+    </script>
+  </body>
+</html>
+    at async (.next/dev/server/chunks/ssr/9e883_7f1f8504._.js:9441:30) {
+  graphQLErrors: [],
+  networkError: Error: <!--
+   *  Copyright (c) 2021 GraphQL Contributors
+   *  All rights reserved.
+   *
+   *  This source code is licensed under the license found in the
+   *  LICENSE file in the root directory of this source tree.
+  -->
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Ponder Playground</title>
+      <style>
+        body {
+          height: 100%;
+          margin: 0;
+          width: 100%;
+          overflow: hidden;
+        }
+        #graphiql {
+          height: 100vh;
+        }
+        *::-webkit-scrollbar {
+          height: 0.3rem;
+          width: 0.5rem;
+        }
+        *::-webkit-scrollbar-track {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+        *::-webkit-scrollbar-thumb {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+      </style>
+      <link rel="stylesheet" href="https://unpkg.com/graphiql@3.7.2/graphiql.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/style.css" />
+    </head>
+    <body>
+      <div id="graphiql">Loading...</div>
+      <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>1
+      <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/graphiql@3.7.2/graphiql.min.js" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/index.umd.js" crossorigin="anonymous"></script>
+      <script>
+        const fetcher = GraphiQL.createFetcher({ url: "/graphql" });
+        const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
+        const root = ReactDOM.createRoot(document.getElementById("graphiql"));
+        root.render(
+          React.createElement(GraphiQL, {
+            fetcher,
+            plugins: [explorerPlugin],
+            defaultEditorToolsVisibility: false,
+          })
+        );
+      </script>
+    </body>
+  </html>
+      at async (.next/dev/server/chunks/ssr/9e883_7f1f8504._.js:9441:30),
+  response: Response {
+    status: 200,
+    statusText: '',
+    headers: Headers {
+      'access-control-allow-origin': '*',
+      connection: 'keep-alive',
+      'content-length': '1895',
+      'content-type': 'text/html; charset=UTF-8',
+      date: 'Sun, 23 Nov 2025 11:21:55 GMT',
+      'keep-alive': 'timeout=5'
+    },
+    body: undefined,
+    bodyUsed: true,
+    ok: true,
+    redirected: false,
+    type: 'default',
+    url: 'http://localhost:42069/graphql?query=%7B%0A++agents+%7B%0A++++items+%7B%0A++++++id%0A++++++address%0A++++++uri%0A++++++services+%7B%0A++++++++items+%7B%0A++++++++++id%0A++++++++++__typename%0A++++++++%7D%0A++++++++__typename%0A++++++%7D%0A++++++__typename%0A++++%7D%0A++++__typename%0A++%7D%0A%7D&variables=%7B%7D'
+  }
+}
+ GET / 200 in 60ms (compile: 19ms, render: 40ms)
+GraphQL Error: Error [CombinedError]: [Network] <!--
+ *  Copyright (c) 2021 GraphQL Contributors
+ *  All rights reserved.
+ *
+ *  This source code is licensed under the license found in the
+ *  LICENSE file in the root directory of this source tree.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ponder Playground</title>
+    <style>
+      body {
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      #graphiql {
+        height: 100vh;
+      }
+      *::-webkit-scrollbar {
+        height: 0.3rem;
+        width: 0.5rem;
+      }
+      *::-webkit-scrollbar-track {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+      *::-webkit-scrollbar-thumb {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/graphiql@3.7.2/graphiql.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/style.css" />
+  </head>
+  <body>
+    <div id="graphiql">Loading...</div>
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>1
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/graphiql@3.7.2/graphiql.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/index.umd.js" crossorigin="anonymous"></script>
+    <script>
+      const fetcher = GraphiQL.createFetcher({ url: "/graphql" });
+      const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
+      const root = ReactDOM.createRoot(document.getElementById("graphiql"));
+      root.render(
+        React.createElement(GraphiQL, {
+          fetcher,
+          plugins: [explorerPlugin],
+          defaultEditorToolsVisibility: false,
+        })
+      );
+    </script>
+  </body>
+</html>
+    at async (.next/dev/server/chunks/ssr/9e883_7f1f8504._.js:9441:30) {
+  graphQLErrors: [],
+  networkError: Error: <!--
+   *  Copyright (c) 2021 GraphQL Contributors
+   *  All rights reserved.
+   *
+   *  This source code is licensed under the license found in the
+   *  LICENSE file in the root directory of this source tree.
+  -->
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Ponder Playground</title>
+      <style>
+        body {
+          height: 100%;
+          margin: 0;
+          width: 100%;
+          overflow: hidden;
+        }
+        #graphiql {
+          height: 100vh;
+        }
+        *::-webkit-scrollbar {
+          height: 0.3rem;
+          width: 0.5rem;
+        }
+        *::-webkit-scrollbar-track {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+        *::-webkit-scrollbar-thumb {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+      </style>
+      <link rel="stylesheet" href="https://unpkg.com/graphiql@3.7.2/graphiql.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/style.css" />
+    </head>
+    <body>
+      <div id="graphiql">Loading...</div>
+      <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>1
+      <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/graphiql@3.7.2/graphiql.min.js" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/index.umd.js" crossorigin="anonymous"></script>
+      <script>
+        const fetcher = GraphiQL.createFetcher({ url: "/graphql" });
+        const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
+        const root = ReactDOM.createRoot(document.getElementById("graphiql"));
+        root.render(
+          React.createElement(GraphiQL, {
+            fetcher,
+            plugins: [explorerPlugin],
+            defaultEditorToolsVisibility: false,
+          })
+        );
+      </script>
+    </body>
+  </html>
+      at async (.next/dev/server/chunks/ssr/9e883_7f1f8504._.js:9441:30),
+  response: Response {
+    status: 200,
+    statusText: 'OK',
+    headers: Headers {
+      'access-control-allow-origin': '*',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '1895',
+      date: 'Sun, 23 Nov 2025 11:22:32 GMT',
+      connection: 'keep-alive',
+      'keep-alive': 'timeout=5'
+    },
+    body: undefined,
+    bodyUsed: true,
+    ok: true,
+    redirected: false,
+    type: 'default',
+    url: 'http://localhost:42069/graphql?query=%7B%0A++agents+%7B%0A++++items+%7B%0A++++++id%0A++++++address%0A++++++uri%0A++++++services+%7B%0A++++++++items+%7B%0A++++++++++id%0A++++++++++__typename%0A++++++++%7D%0A++++++++__typename%0A++++++%7D%0A++++++__typename%0A++++%7D%0A++++__typename%0A++%7D%0A%7D&variables=%7B%7D'
+  }
+}
+ GET / 200 in 34ms (compile: 1554µs, render: 32ms)
+GraphQL Error: Error [CombinedError]: [Network] <!--
+ *  Copyright (c) 2021 GraphQL Contributors
+ *  All rights reserved.
+ *
+ *  This source code is licensed under the license found in the
+ *  LICENSE file in the root directory of this source tree.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ponder Playground</title>
+    <style>
+      body {
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      #graphiql {
+        height: 100vh;
+      }
+      *::-webkit-scrollbar {
+        height: 0.3rem;
+        width: 0.5rem;
+      }
+      *::-webkit-scrollbar-track {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+      *::-webkit-scrollbar-thumb {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/graphiql@3.7.2/graphiql.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/style.css" />
+  </head>
+  <body>
+    <div id="graphiql">Loading...</div>
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>1
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/graphiql@3.7.2/graphiql.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/index.umd.js" crossorigin="anonymous"></script>
+    <script>
+      const fetcher = GraphiQL.createFetcher({ url: "/graphql" });
+      const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
+      const root = ReactDOM.createRoot(document.getElementById("graphiql"));
+      root.render(
+        React.createElement(GraphiQL, {
+          fetcher,
+          plugins: [explorerPlugin],
+          defaultEditorToolsVisibility: false,
+        })
+      );
+    </script>
+  </body>
+</html>
+    at async (.next/dev/server/chunks/ssr/9e883_7f1f8504._.js:9441:30) {
+  graphQLErrors: [],
+  networkError: Error: <!--
+   *  Copyright (c) 2021 GraphQL Contributors
+   *  All rights reserved.
+   *
+   *  This source code is licensed under the license found in the
+   *  LICENSE file in the root directory of this source tree.
+  -->
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Ponder Playground</title>
+      <style>
+        body {
+          height: 100%;
+          margin: 0;
+          width: 100%;
+          overflow: hidden;
+        }
+        #graphiql {
+          height: 100vh;
+        }
+        *::-webkit-scrollbar {
+          height: 0.3rem;
+          width: 0.5rem;
+        }
+        *::-webkit-scrollbar-track {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+        *::-webkit-scrollbar-thumb {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+      </style>
+      <link rel="stylesheet" href="https://unpkg.com/graphiql@3.7.2/graphiql.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/style.css" />
+    </head>
+    <body>
+      <div id="graphiql">Loading...</div>
+      <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>1
+      <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/graphiql@3.7.2/graphiql.min.js" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/@graphiql/plugin-explorer@3.2.3/dist/index.umd.js" crossorigin="anonymous"></script>
+      <script>
+        const fetcher = GraphiQL.createFetcher({ url: "/graphql" });
+        const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
+        const root = ReactDOM.createRoot(document.getElementById("graphiql"));
+        root.render(
+          React.createElement(GraphiQL, {
+            fetcher,
+            plugins: [explorerPlugin],
+            defaultEditorToolsVisibility: false,
+          })
+        );
+      </script>
+    </body>
+  </html>
+      at async (.next/dev/server/chunks/ssr/9e883_7f1f8504._.js:9441:30),
+  response: Response {
+    status: 200,
+    statusText: 'OK',
+    headers: Headers {
+      'access-control-allow-origin': '*',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '1895',
+      date: 'Sun, 23 Nov 2025 11:22:42 GMT',
+      connection: 'keep-alive',
+      'keep-alive': 'timeout=5'
+    },
+    body: undefined,
+    bodyUsed: true,
+    ok: true,
+    redirected: false,
+    type: 'default',
+    url: 'http://localhost:42069/graphql?query=%7B%0A++agents+%7B%0A++++items+%7B%0A++++++id%0A++++++address%0A++++++uri%0A++++++services+%7B%0A++++++++items+%7B%0A++++++++++id%0A++++++++++__typename%0A++++++++%7D%0A++++++++__typename%0A++++++%7D%0A++++++__typename%0A++++%7D%0A++++__typename%0A++%7D%0A%7D&variables=%7B%7D'
+  }
+}
+ GET / 200 in 29ms (compile: 1598µs, render: 28ms)
+ GET / 200 in 54ms (compile: 19ms, render: 35ms)
+ GET / 200 in 29ms (compile: 1515µs, render: 27ms)

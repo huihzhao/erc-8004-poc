@@ -4,18 +4,26 @@ import Link from 'next/link';
 const AGENTS_QUERY = `
   query {
     agents {
-      id
-      address
-      uri
-      services {
+      items {
         id
+        address
+        uri
+        services {
+          items {
+            id
+          }
+        }
       }
     }
   }
 `;
 
 export default async function Home() {
-  const { data } = await client.query(AGENTS_QUERY, {}).toPromise();
+  const { data, error } = await client.query(AGENTS_QUERY, {}).toPromise();
+  if (error) {
+    console.error("GraphQL Error:", error);
+  }
+  const agents = data?.agents?.items || [];
 
   // Mock reputation for now (random 80-100)
   const getReputation = () => Math.floor(Math.random() * (100 - 80 + 1) + 80);
@@ -29,7 +37,7 @@ export default async function Home() {
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {data?.agents.map((agent: any) => (
+          {agents.map((agent: any) => (
             <Link href={`/agents/${agent.id}`} key={agent.id} className="block group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 h-full">
                 <div className="flex items-center justify-between mb-4">
@@ -51,14 +59,14 @@ export default async function Home() {
 
                 <div className="flex items-center text-sm text-gray-600">
                   <span className="mr-2">🛠️</span>
-                  {agent.services.length} Services Active
+                  {agent.services.items.length} Services Active
                 </div>
               </div>
             </Link>
           ))}
         </div>
 
-        {(!data || data.agents.length === 0) && (
+        {agents.length === 0 && (
           <div className="text-center py-20">
             <p className="text-gray-500 text-xl">No agents found. Run the demo script to register some!</p>
           </div>
