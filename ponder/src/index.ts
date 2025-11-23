@@ -1,5 +1,5 @@
 import { ponder } from "@/generated";
-import { Agent, Service, Validation, Dispute, Reputation } from "../ponder.schema";
+import { Agent, Service, Validation, Dispute, Reputation, Juror } from "../ponder.schema";
 
 ponder.on("AgentIdentityRegistry:AgentRegistered", async ({ event, context }) => {
     await context.db.insert(Agent).values({
@@ -54,6 +54,14 @@ ponder.on("AgentValidationRegistry:TaskValidated", async ({ event, context }) =>
         isValidated: true,
         isValid: event.args.isValid,
         validator: event.args.validator,
+    });
+});
+
+ponder.on("AgentJuryRegistry:JurorRegistered", async ({ event, context }) => {
+    await context.db.insert(Juror).values({
+        address: event.args.juror,
+        stakedAmount: event.args.stakedAmount,
+        isRegistered: true,
     });
 });
 

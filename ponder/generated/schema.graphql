@@ -27,6 +27,8 @@ type Query {
   validations(where: ValidationFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ValidationPage!
   dispute(id: BigInt!): Dispute
   disputes(where: DisputeFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): DisputePage!
+  juror(address: String!): Juror
+  jurors(where: JurorFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): JurorPage!
   _meta: Meta
 }
 
@@ -347,4 +349,43 @@ input DisputeFilter {
   ruling_not: Boolean
   ruling_in: [Boolean]
   ruling_not_in: [Boolean]
+}
+
+type Juror {
+  address: String!
+  stakedAmount: BigInt
+  isRegistered: Boolean
+}
+
+type JurorPage {
+  items: [Juror!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input JurorFilter {
+  AND: [JurorFilter]
+  OR: [JurorFilter]
+  address: String
+  address_not: String
+  address_in: [String]
+  address_not_in: [String]
+  address_contains: String
+  address_not_contains: String
+  address_starts_with: String
+  address_ends_with: String
+  address_not_starts_with: String
+  address_not_ends_with: String
+  stakedAmount: BigInt
+  stakedAmount_not: BigInt
+  stakedAmount_in: [BigInt]
+  stakedAmount_not_in: [BigInt]
+  stakedAmount_gt: BigInt
+  stakedAmount_lt: BigInt
+  stakedAmount_gte: BigInt
+  stakedAmount_lte: BigInt
+  isRegistered: Boolean
+  isRegistered_not: Boolean
+  isRegistered_in: [Boolean]
+  isRegistered_not_in: [Boolean]
 }

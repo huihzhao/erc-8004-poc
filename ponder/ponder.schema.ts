@@ -68,3 +68,10 @@ export const Dispute = onchainTable("Dispute", (p) => ({
     resolved: p.boolean(),
     ruling: p.boolean(),
 }));
+
+export const Juror = onchainTable("Juror", (p) => ({
+    address: p.hex().primaryKey(),
+    stakedAmount: p.bigint(),
+    isRegistered: p.boolean(),
+}));
+
