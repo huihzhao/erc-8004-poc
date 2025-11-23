@@ -9,6 +9,7 @@ export const Agent = onchainTable("Agent", (p) => ({
 export const AgentRelations = relations(Agent, ({ many }) => ({
     services: many(Service),
     validations: many(Validation),
+    reputations: many(Reputation),
 }));
 
 export const Service = onchainTable("Service", (p) => ({
@@ -21,6 +22,22 @@ export const Service = onchainTable("Service", (p) => ({
 export const ServiceRelations = relations(Service, ({ one }) => ({
     agent: one(Agent, {
         fields: [Service.agentId],
+        references: [Agent.id],
+    }),
+}));
+
+export const Reputation = onchainTable("Reputation", (p) => ({
+    id: p.text().primaryKey(), // Unique ID (could be agentId-reviewer-timestamp)
+    agentId: p.bigint(),
+    reviewer: p.hex(),
+    score: p.integer(),
+    comment: p.text(),
+    timestamp: p.bigint(),
+}));
+
+export const ReputationRelations = relations(Reputation, ({ one }) => ({
+    agent: one(Agent, {
+        fields: [Reputation.agentId],
         references: [Agent.id],
     }),
 }));
@@ -51,6 +68,3 @@ export const Dispute = onchainTable("Dispute", (p) => ({
     resolved: p.boolean(),
     ruling: p.boolean(),
 }));
-
-
-

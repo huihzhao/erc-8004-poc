@@ -21,6 +21,8 @@ type Query {
   agents(where: AgentFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): AgentPage!
   service(id: String!): Service
   services(where: ServiceFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ServicePage!
+  reputation(id: String!): Reputation
+  reputations(where: ReputationFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ReputationPage!
   validation(id: String!): Validation
   validations(where: ValidationFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ValidationPage!
   dispute(id: BigInt!): Dispute
@@ -34,6 +36,7 @@ type Agent {
   uri: String
   services(where: ServiceFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ServicePage
   validations(where: ValidationFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ValidationPage
+  reputations(where: ReputationFilter, orderBy: String, orderDirection: String, before: String, after: String, limit: Int): ReputationPage
 }
 
 type ServicePage {
@@ -159,6 +162,81 @@ input ValidationFilter {
   disputeId_lt: BigInt
   disputeId_gte: BigInt
   disputeId_lte: BigInt
+}
+
+type ReputationPage {
+  items: [Reputation!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type Reputation {
+  id: String!
+  agentId: BigInt
+  reviewer: String
+  score: Int
+  comment: String
+  timestamp: BigInt
+  agent: Agent
+}
+
+input ReputationFilter {
+  AND: [ReputationFilter]
+  OR: [ReputationFilter]
+  id: String
+  id_not: String
+  id_in: [String]
+  id_not_in: [String]
+  id_contains: String
+  id_not_contains: String
+  id_starts_with: String
+  id_ends_with: String
+  id_not_starts_with: String
+  id_not_ends_with: String
+  agentId: BigInt
+  agentId_not: BigInt
+  agentId_in: [BigInt]
+  agentId_not_in: [BigInt]
+  agentId_gt: BigInt
+  agentId_lt: BigInt
+  agentId_gte: BigInt
+  agentId_lte: BigInt
+  reviewer: String
+  reviewer_not: String
+  reviewer_in: [String]
+  reviewer_not_in: [String]
+  reviewer_contains: String
+  reviewer_not_contains: String
+  reviewer_starts_with: String
+  reviewer_ends_with: String
+  reviewer_not_starts_with: String
+  reviewer_not_ends_with: String
+  score: Int
+  score_not: Int
+  score_in: [Int]
+  score_not_in: [Int]
+  score_gt: Int
+  score_lt: Int
+  score_gte: Int
+  score_lte: Int
+  comment: String
+  comment_not: String
+  comment_in: [String]
+  comment_not_in: [String]
+  comment_contains: String
+  comment_not_contains: String
+  comment_starts_with: String
+  comment_ends_with: String
+  comment_not_starts_with: String
+  comment_not_ends_with: String
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_in: [BigInt]
+  timestamp_not_in: [BigInt]
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
 }
 
 type AgentPage {

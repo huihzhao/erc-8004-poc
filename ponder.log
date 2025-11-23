@@ -1,0 +1,305 @@
+
+> dev
+> ponder dev
+
+Failed to find Response internal state key
+12:35:50 PM WARN  app        Local environment file (.env.local) not found
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:35:50 PM INFO  build      Using PGlite database at .ponder/pglite (default)
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:35:50 PM WARN  build      Network 'hardhat' is using a public RPC URL (http://127.0.0.1:8545). Most apps require an RPC URL with a higher rate limit.
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:42069
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:35:51 PM INFO  database   Created tables [Agent, Service, Validation, Dispute]
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:35:51 PM INFO  database   Created view 'public'.'Agent'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:35:51 PM INFO  database   Created view 'public'.'Service'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:35:51 PM INFO  database   Created view 'public'.'Validation'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:35:51 PM INFO  database   Created view 'public'.'Dispute'
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:37:05 PM WARN  sync       Failed 'eth_chainId' RPC request after 10 attempts
+HttpRequestError: HTTP request failed.
+
+URL: http://127.0.0.1:8545
+Request body: {"method":"eth_chainId"}
+
+Details: fetch failed
+Version: viem@2.39.3
+    at Object.request (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/rpc/http.ts:168:15)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at fn (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/clients/transports/http.ts:148:19)
+    at request (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/clients/transports/http.ts:153:39)
+    at withRetry.delay.count.count (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/buildRequest.ts:150:22)
+    at attemptRetry (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/promise/withRetry.ts:44:22)
+caused by: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15845:13
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at withTimeout.errorInstance.TimeoutError.body.body (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/rpc/http.ts:127:30)
+    at file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/promise/withTimeout.ts:38:17
+caused by: Error: connect ECONNREFUSED 127.0.0.1:8545
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:37:05 PM ERROR process    Caught unhandledRejection event
+HttpRequestError: HTTP request failed.
+
+URL: http://127.0.0.1:8545
+Request body: {"method":"eth_chainId"}
+
+Details: fetch failed
+Version: viem@2.39.3
+    at file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/@ponder/common/src/queue.ts:184:15
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+caused by: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15845:13
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at withTimeout.errorInstance.TimeoutError.body.body (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/rpc/http.ts:127:30)
+    at file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/promise/withTimeout.ts:38:17
+caused by: Error: connect ECONNREFUSED 127.0.0.1:8545
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:37:05 PM WARN  process    Received unhandledRejection, starting shutdown sequence
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:37:05 PM WARN  sync       Failed 'eth_getBlockByNumber' RPC request after 10 attempts
+HttpRequestError: HTTP request failed.
+
+URL: http://127.0.0.1:8545
+Request body: {"method":"eth_getBlockByNumber","params":["0x0",true]}
+
+Details: fetch failed
+Version: viem@2.39.3
+    at Object.request (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/rpc/http.ts:168:15)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at fn (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/clients/transports/http.ts:148:19)
+    at request (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/clients/transports/http.ts:153:39)
+    at withRetry.delay.count.count (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/buildRequest.ts:150:22)
+    at attemptRetry (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/promise/withRetry.ts:44:22)
+caused by: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15845:13
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at withTimeout.errorInstance.TimeoutError.body.body (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/rpc/http.ts:127:30)
+    at file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/promise/withTimeout.ts:38:17
+caused by: Error: connect ECONNREFUSED 127.0.0.1:8545
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:37:05 PM WARN  sync       Failed 'eth_getBlockByNumber' RPC request after 10 attempts
+HttpRequestError: HTTP request failed.
+
+URL: http://127.0.0.1:8545
+Request body: {"method":"eth_getBlockByNumber","params":["latest",true]}
+
+Details: fetch failed
+Version: viem@2.39.3
+    at Object.request (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/rpc/http.ts:168:15)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at fn (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/clients/transports/http.ts:148:19)
+    at request (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/clients/transports/http.ts:153:39)
+    at withRetry.delay.count.count (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/buildRequest.ts:150:22)
+    at attemptRetry (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/promise/withRetry.ts:44:22)
+caused by: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15845:13
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at withTimeout.errorInstance.TimeoutError.body.body (file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/rpc/http.ts:127:30)
+    at file:///Users/huizhao/Desktop/erc-8004-poc/ponder/node_modules/viem/utils/promise/withTimeout.ts:38:17
+caused by: Error: connect ECONNREFUSED 127.0.0.1:8545
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+
+Sync
+
+Waiting to start...
+
+Indexing
+
+Waiting to start...
+
+Progress
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%
+
+GraphQL
+Server live at http://localhost:0
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G12:37:06 PM FATAL process    Finished shutdown sequence, terminating (exit code 1)

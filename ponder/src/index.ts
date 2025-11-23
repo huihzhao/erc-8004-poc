@@ -1,5 +1,5 @@
 import { ponder } from "@/generated";
-import { Agent, Service, Validation, Dispute } from "../ponder.schema";
+import { Agent, Service, Validation, Dispute, Reputation } from "../ponder.schema";
 
 ponder.on("AgentIdentityRegistry:AgentRegistered", async ({ event, context }) => {
     await context.db.insert(Agent).values({
@@ -23,6 +23,20 @@ ponder.on("AgentServiceRegistry:ServiceUpdated", async ({ event, context }) => {
         metadataURI: event.args.metadataURI,
     });
 });
+
+ponder.on("AgentReputationRegistry:ReputationAdded", async ({ event, context }) => {
+    const id = `${event.args.agentId}-${event.args.reviewer}-${event.block.timestamp}`;
+
+    await context.db.insert(Reputation).values({
+        id,
+        agentId: event.args.agentId,
+        reviewer: event.args.reviewer,
+        score: Number(event.args.score),
+        comment: "", // Comment not available in event
+        timestamp: event.block.timestamp,
+    });
+});
+
 
 ponder.on("AgentValidationRegistry:TaskSubmitted", async ({ event, context }) => {
     await context.db.insert(Validation).values({
